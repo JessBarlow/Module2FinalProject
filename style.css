@@ -744,7 +744,7 @@ PRICING ↓
 
 /* Blue Plan (Highlight) */
 .plan:nth-child(2) {
-  background: rgb(102, 126, 234);
+  background-color: rgb(102, 126, 234);
   color: white;
   
 }
@@ -1007,6 +1007,8 @@ footer {
 }
 
 .footer__heading {
+  display: flex;
+  justify-content: center;
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 16px;
@@ -1053,6 +1055,7 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
+  color: white;
 }
 
 .footer__logo {
@@ -1060,6 +1063,11 @@ footer {
   align-items: center;
   gap: 8px;
   font-weight: 700;
+  color: white;
+}
+
+.footer__title {
+  color: white;
 }
 
 .footer__logo img {
