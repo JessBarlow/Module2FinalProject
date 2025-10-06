@@ -293,13 +293,20 @@ FEATURES ↓
   gap: 24px;            
 }
 
+.features__grouped {
+display: flex;            
+  flex-wrap: wrap;          
+  justify-content: space-between; 
+  gap: 24px;    
+}
+
 .feature {
   flex: 1 1 calc(33.333% - 24px); 
   max-width: 300px;     
   box-sizing: border-box;
 }
 .feature__row {
-    width: 100%;
+    
     display: flex;
     justify-content: center;
     max-width: 240px;
@@ -342,7 +349,7 @@ FEATURES ↓
 }
 
 .feature__img {
-  width: 60px;  /* image size inside the circle */
+  width: 60px;  
   height: 60px;
   object-fit: contain;
 }
@@ -931,10 +938,13 @@ START / CALL TO ACTION ↓
 .start__title {
     color: white;
     text-align:center;
+    display: flex;
+    justify-content: center;
     max-width: 1024px;
     font-size: 24px;
     font-weight: 600;
     padding-bottom: 24px;
+    margin: 0 auto;
 }
 
 
@@ -984,7 +994,8 @@ footer {
 /* --- Columns --- */
 .footer__columns {
   display: flex;
-  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 40px;
 }
@@ -999,7 +1010,7 @@ footer {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 16px;
-  colour: white;
+  color: white;
 }
 
 .footer__list {
@@ -1010,6 +1021,8 @@ footer {
 
 .footer__list li {
   margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
 }
 
 .footer__list a {
