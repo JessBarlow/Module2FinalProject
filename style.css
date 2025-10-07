@@ -1207,17 +1207,35 @@ font-size: 20px;
 .footer__socials {
   display: flex;
   gap: 16px;
+  z-index: 2;
+  position: relative;
 }
 
 .footer__social--link {
-  color: white;
+  background-color: white;      
+  color: #243e63;               
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;                   
+  height: 36px;
+  border-radius: 50%;             
+  transition: all 0.3s ease;
+  z-index: 2;
+  text-decoration: none;
+}
+
+.footer__social--link:hover {
+  background-color: #6415ff;    
+  color: white;                  
+  transform: scale(1.1);        
 }
 
 .footer__social--link svg {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   display: block;
+  z-index: 2;
 }
 
 /* MOBILE RESPONSIVENESS */
