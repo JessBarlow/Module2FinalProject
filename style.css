@@ -285,6 +285,13 @@ FEATURES ↓
 
 */
 
+.features__grouped {
+display: flex;            
+  flex-wrap: wrap;          
+  justify-content: space-between; 
+  gap: 24px;    
+}
+
 
 .features {
   display: flex;
@@ -293,12 +300,6 @@ FEATURES ↓
   gap: 24px;            
 }
 
-.features__grouped {
-display: flex;            
-  flex-wrap: wrap;          
-  justify-content: space-between; 
-  gap: 24px;    
-}
 
 .feature {
   flex: 1 1 calc(33.333% - 24px); 
@@ -930,61 +931,99 @@ TESTIMONIALS ↓
 START / CALL TO ACTION ↓
 
 */
-
-
-
 #start .row {
-    position: relative;
-    box-sizing: border-box;
-    width: 100%;
-    overflow: hidden;
-    background-color:#6415ff;
-    padding: 96px 32px;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6415ff;
+  padding: 96px 32px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.start__row {
+  color: white;
+  text-align: center;
+  max-width: 1024px;
+  width: 100%;
 }
 
 .start__title {
-    color: white;
-    text-align:center;
-    display: flex;
-    justify-content: center;
-    max-width: 1024px;
-    font-size: 24px;
-    font-weight: 600;
-    padding-bottom: 24px;
-    margin: 0 auto;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
 }
 
-
-.start__row {
-    color: white;
-    text-align:center;
-    max-width: 1024px;
-    font-size: 24px;
-    font-weight: 600;
-  
+.start__buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
-
 
 .start__button {
   font-size: 14px;
-    background-color: #f56565;
-    border-radius: 9999px 9999px 9999px 9999px;
-    padding: 14px 24px;
-    transition:ease;
-    cursor: pointer;
+  background-color: #f56565;
+  border: none;
+  border-radius: 9999px;
+  padding: 14px 24px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.start__button:hover {
+  background-color: #e53e3e;
 }
 
 .start__button2 {
-    
-    background-color: #6415ff;
-    color: #f7fafc;
-    Border-radius: 500px;
-    margin-left: 16px;
-    border-radius: 9999px 9999px 9999px 9999px;
-    padding: 14px 24px;
-    cursor: pointer;
+  font-size: 14px;
+  background-color: #6415ff;
+  color: #f7fafc;
+  border: 2px solid #f7fafc;
+  border-radius: 9999px;
+  padding: 14px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.start__button2:hover {
+  background-color: white;
+  color: #6415ff;
+}
+
+/* ===== Responsive: stack & center on smaller screens ===== */
+@media (max-width: 900px) {
+  .start__row {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .start__title {
+    max-width: 100%;
+  }
+
+  .start__buttons {
+    justify-content: center;
+  }
+
+  /* blob reposition a bit for mobile so it doesn't block content */
+  .start__blob {
+    top: auto;
+    bottom: -120px;
+    right: -100px;
+    width: 480px;
+    height: 480px;
+    transform: none;
+    filter: blur(60px);
+  }
+}
+
+/* small nicety: ensure buttons inherit white text in case global rule exists */
+#start .start__button,
+#start .start__button--ghost { color: #fff !important; }
 
 /* 
 
