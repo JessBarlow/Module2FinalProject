@@ -675,7 +675,7 @@ PRICING ↓
 }
 
 .plan__name {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   color: black;
 }
@@ -695,14 +695,15 @@ PRICING ↓
 }
 
 .plan__middle {
-  padding: 4px 0;
+  padding: 8px 0;
   border-top: 1px solid #e5e7eb;
   border-bottom: 1px solid #e5e7eb;
 }
 
 .plan__target {
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
+  padding-top: 56px;
 }
 
 .plan__feature {
@@ -710,6 +711,7 @@ PRICING ↓
   line-height: 1.5;
   color: #555;
   font-size: 15px;
+  padding-top: 4px;
 }
 
 .plan__bottom {
@@ -753,7 +755,8 @@ PRICING ↓
 }
 .plan:nth-child(2) .plan__button {
   background: white;
-  color: rgb(102, 126, 234);
+  color: #6415ff
+ 
 }
 .plan:nth-child(2) .plan__top,
 .plan:nth-child(2) .plan__middle,
@@ -773,6 +776,11 @@ PRICING ↓
   color: white;
 }
  .plan:nth-child(2) .plan__feature {
+  text-decoration: none;
+  
+}
+
+.plan:nth-child(2) .plan__feature {
   color: white;
 }
 
