@@ -979,6 +979,7 @@ START / CALL TO ACTION ↓
 
 */
 #start .row {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -987,9 +988,11 @@ START / CALL TO ACTION ↓
   box-sizing: border-box;
   border-radius: 8px;
   width: 100%;
+  overflow: hidden;
 }
 
 .start__row {
+
   color: white;
   text-align: left;
   max-width: 1024px;
@@ -1050,6 +1053,30 @@ START / CALL TO ACTION ↓
   color: #6415ff;
 }
 
+.start__blob--1 {
+position: absolute;
+ bottom: 0px;
+ left: 0px;
+ height: 20rem;
+ width: 20rem;
+ transform: translate(-5rem, 8rem);
+ color:rgb(80, 17, 204);
+ opacity: 0.5;
+ overflow: hidden;
+}
+
+.start__blob--2 {
+  position: absolute;
+ top: 0px;
+ right: 0px;
+ height: 20rem;
+ width: 20rem;
+ transform: translate(5rem, -16rem);
+ color:rgb(80, 17, 204);
+ opacity: 0.5;
+ overflow: hidden;
+}
+
 /* ===== Responsive: stack & center on smaller screens ===== */
 @media (max-width: 900px) {
   .start__row {
@@ -1099,7 +1126,7 @@ footer {
 }
 
 /* Footer blobs */
-.footer__blob--1,{
+.footer__blob--1 {
   position: absolute;
   width: 320px;
   height: 320px;
