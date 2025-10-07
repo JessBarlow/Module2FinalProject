@@ -829,7 +829,7 @@ PRICING ↓
 }
 
 .plan:nth-child(2) .plan__feature {
-  color: white;
+  color: white !important;
 }
 
  .plan:nth-child(2) .plan__name {
@@ -1090,70 +1090,79 @@ FOOTER ↓
 */
 
 footer {
+  position: relative;
   padding: 60px 16px 20px;
-  background-color: rgb(100, 21, 255);
+  background-color: #6415ff;
   color: white;
   font-family: sans-serif;
+  overflow: hidden;
 }
 
-/* --- Columns --- */
+/* Footer blobs */
+.footer__blob--1,
+.footer__blob--2 {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: -200px;
+  left: -200px;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.footer__blob--2 {
+  top: auto;
+  bottom: -200px;
+  left: auto;
+  right: -200px;
+}
+
+/* Columns */
 .footer__columns {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 32px;
   margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+  text-align: left;
 }
 
 .footer__column {
-    display: flex;
-    justify-content: center;
- flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.footer__heading {
-  display: flex;
-  justify-content: center;
+.footer__column--title {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 16px;
   color: white;
 }
 
-.footer__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer__list li {
-  margin-bottom: 8px;
-  display: flex;
-  justify-content: center;
-}
-
-.footer__list a {
+.footer__column--link {
+  font-size: 14px;
   color: white;
   text-decoration: none;
-  font-size: 14px;
 }
 
-.footer__list a:hover {
+.footer__column--link:hover {
   text-decoration: underline;
-    text-decoration-thickness:3px;
-    text-underline-offset: 7px;
-    text-decoration-color: white;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 7px;
+  text-decoration-color: white;
 }
 
-/* --- Divider --- */
+/* Divider */
 .footer__divider {
-  border: none;
   height: 1px;
-  background-color: #ccc;
+  background-color: rgba(255, 255, 255, 0.2);
   margin-bottom: 24px;
 }
 
-/* --- Bottom row --- */
+/* Bottom row */
 .footer__bottom {
   display: flex;
   justify-content: space-between;
@@ -1161,23 +1170,24 @@ footer {
   flex-wrap: wrap;
   gap: 16px;
   color: white;
+  position: relative;
+  z-index: 2;
 }
 
 .footer__logo {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-weight: 700;
-  color: white;
 }
 
-.footer__title {
-  color: white;
+.footer__logo--text {
+color: white;
+font-size: 20px;
 }
 
 .footer__logo img {
-  height: 32px;
   width: 32px;
+  height: 32px;
 }
 
 .footer__copyright {
@@ -1194,16 +1204,9 @@ footer {
 
 .footer__social--link {
   color: white;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
 }
 
-
-
-
-/* MOBILE RESPONSIVENESS ↓ */ 
-
+/* MOBILE RESPONSIVENESS */
 @media (max-width: 1024px) {
   .footer__columns {
     flex-direction: column;
